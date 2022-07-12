@@ -1,5 +1,25 @@
 var style = getComputedStyle(document.body)
 createCanvas(style.getPropertyValue('--columns-row'))
+var colorPick
+
+const btnBlack = document.querySelector('#black');
+btnBlack.addEventListener('click', () => {
+    colorPick = 'black'
+    console.log(colorPick)
+})
+
+const btnRainbow = document.querySelector('#rainbow');
+btnRainbow.addEventListener('click', () => {
+    colorPick = 'rainbow'
+    console.log(colorPick)
+})
+
+const btnClear = document.querySelector('#clear');
+btnClear.addEventListener('click', () => {
+    createCanvas(style.getPropertyValue('--columns-row'))
+})
+
+
 
 function createCanvas(size){
     var canvas = document.getElementById("canvas");
@@ -15,7 +35,15 @@ function createCanvas(size){
         div.addEventListener('mousemove', function(event)
         {
             if(event.buttons == 1){
-                this.style.backgroundColor = 'red'; 
+                if(colorPick === 'black'){
+                    this.style.backgroundColor = 'black';    
+                }else if(colorPick === 'rainbow'){
+                    this.style.backgroundColor = 'blue';
+
+                }else{
+                    this.style.backgroundColor = 'red'; 
+                    console.log(colorPick)
+                }
             }
         });
     }
