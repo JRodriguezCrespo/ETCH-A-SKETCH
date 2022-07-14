@@ -11,12 +11,20 @@
     <h1 class="tittle">ETCH-A-SKETCH</h1>
     <div id="canvas"></div>
     <div class="functions">
-        <input type="range" min="1" max="64" value="16" onchange="changeSize(this.value)">
-        
-        <button id="black">Black</button>
-        <button id="rainbow">Rainbow</button>
-        <button id="clear">Clear</button>
+        <span id="grimSize-label">Grid size: 16 x 16</span>
+        <input type="range" min="1" max="64" value="16" onchange="changeSize(this.value)" id="range">
+        <div class="radio">
+            <button id="black" class="btn-selection btn-selected">Black</button>
+            <button id="rainbow" class="btn-selection">Rainbow</button>
+        </div>
+        <div class="radio">
+            <button id="eraser" class="btn-selection">Eraser</button>
+            <button id="clear" class="btn-selection">Clear</button>
+        </div>
     </div>
+    <footer>
+        <p>Copyright &copy SkiYonn 2022 </p>
+    </footer>
 </body>
 
 <script src="code.js"></script>

@@ -8,32 +8,80 @@ body, html, *{
     font-family: sans-serif;
 }
 
+
+footer{
+    font-size: 16px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+    padding: 20px;
+}
+
 .tittle{
     text-align: center;
     font-size: 42px;
-    margin: 30px;
+    padding: 20px;
+    margin-bottom: 30px;
 }
 
 #canvas{
     display: grid;
+    background-color: white;
     grid-template-columns: repeat(var(--columns-row), 1fr);
     grid-template-rows: repeat(var(--columns-row), 1fr);
     width: 500px;
     height: 500px;
     border: 2px solid black;
+    box-shadow: -1px 1px 7px black; 
     margin: auto;
-    margin-bottom: 50px;
+    margin-bottom: 35px;
 }
 
 .functions{
-    background-color: aqua;
-    width: 500px;
+    display: flex;
+    flex-direction: column;
+    width: 400px;
     margin: auto;
+}
+
+#grimSize-label{
+    text-align: center;
+    font-size: 20px;
+    margin-bottom: 7px;
+}
+
+input[type='range']{
+    accent-color: orange;
 }
 
 
 .radio{
     display: flex;
     justify-content: space-evenly;
+}
+
+.btn-selection{
+    background-color: transparent;
+    border: 2px solid black;
+    width: 150px;
+    border-radius: 15px;
+    padding: 5px;
+    margin-top: 15px;
+    font-size: 18px;
+}
+
+.btn-selection:hover{
+    background-color: rgb(248, 211, 141);
+}
+
+button:hover:active{
+    background-color: orange;
+}
+
+
+.btn-selected{
+    background-color: orange;
 }
 
